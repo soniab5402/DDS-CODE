@@ -21,6 +21,13 @@ Node*insert(Node*root,int key){
     }
         return root;
     }
+void inorder(Node*root){
+    if(root){
+        inorder(root->left);
+        cout<<root->data<< " ";
+        inorder(root->right);
+    }
+}
 int main(){
     int n;
     cout<< "enter the total no. of nodes:";
@@ -33,5 +40,7 @@ Node*root=nullptr;
 for(int i=0;i<n;i++){
     root=insert(root,arr[i]);
 }
-
+inorder(root);
 }
+
+  
